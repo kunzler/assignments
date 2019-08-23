@@ -24,8 +24,12 @@ var canvasser = {
                 {
                     neighborhood: "Washington",
                     doorsKnocked: 55
-                },            ]
+                },            ],
+                script: function () {
+                    console.log(" nada?");}  
+            
         },
+        
         {
             name: "Totimny",
             age: 27,
@@ -48,7 +52,7 @@ var canvasser = {
                 {
                     neighborhood: "Snartville",
                     doorsKnocked: 20
-                },            
+                },     
             ]  
         },
     ]
@@ -66,3 +70,4 @@ canvasser.neighborhoodsWalked.push({
 )
 
 canvasser.script()
+canvasser.walkingBuddies[1].script()
