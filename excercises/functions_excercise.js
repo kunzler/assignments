@@ -5,6 +5,7 @@ mySum = (x, y) => {
 console.log( mySum (5, 4));
 //Write a function that accepts three numbers as parameters, and returns the largest of those numbers.
 largestOfThree = (x, y, z) => {
+    return Math.max(x, y, z)
 }
 
 //Write a function that accepts one number as a parameter, and returns whether that number is even or odd. (Return the string "even" or "odd");
@@ -21,7 +22,7 @@ console.log(evenOrOdd(9));
 stringManipulated = (aString) => {
     if (aString.length < 20) {
         return aString + aString;
-    } else return aString.substring(0, 20);
+    } else return aString.substring(0, aString.length/2);
 } 
 console.log(stringManipulated("sucka"));
 console.log(stringManipulated("suckasuckasuckasuckasuckasucka"));
