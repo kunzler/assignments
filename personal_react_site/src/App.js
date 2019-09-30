@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import Foot from './Foot';
 import Nav from './Nav';
+import Quote1 from './Quote1.js'
+import Quote2 from './Quote2.js'
+import Quote3 from './Quote3.js'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -17,7 +20,7 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({ loading: true })
-    Axios.get(url)
+    axios.get(url)
       .then(response => {
         console.log(response.data)
         this.setState({
@@ -35,11 +38,13 @@ class App extends Component {
   render() {
     const text = this.state.loading ? "loading..." : `${this.state.gotQuote.quote}
                 -- ${this.state.gotQuote.character}`;
-    // console.log(this.state.gotQuote.quote)
     return (
       <div className="App">
         <Nav />
         <p>{text}</p>
+        <Quote1 />
+        <Quote2 />
+        <Quote3 />
         <Foot />
 
       </div>
