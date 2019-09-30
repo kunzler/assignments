@@ -1,0 +1,32 @@
+
+
+#yellow{
+    background-color: #FECC02;
+    width: 130px;
+    height: 100%;
+    margin:0;
+    right: 610px;
+    position: fixed;
+}
+
+#alsoYellow{
+    background-color: #FECC02;
+    width: 100%;
+    height: 130px;
+    margin:0;
+    position: fixed;
+    bottom: 360px;
+}
+#blue{
+    background-color: #006BA7;
+    width: 100%;
+    height: 600px;
+    margin:0;
+}
+
+#container{
+    background-color: #006BA7
+    width: 100%;
+    height: 100%
+    
+}

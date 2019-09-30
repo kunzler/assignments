@@ -1,0 +1,118 @@
+form {
+    height: 100%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(6, 100px);
+    grid-template-areas:
+
+        "h h h h h h"
+        "g x x x x x"
+        "b y y y y y"
+        "c z z z z z"
+        "t t t t t t"
+        "f f f f f f"
+
+}
+
+body {
+    background-color: chocolate;
+    margin: 20px;
+    padding: 10px;
+    font-size: large;
+}
+
+header {
+    grid-area: h;
+    background-color: rgb(140, 210, 161);
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.goombas {
+    background-color: aqua;
+    grid-area: g;
+    background-image: url("goomba.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+.bob-ombs {
+    background-color: green;
+    grid-area: b;
+    background-image: url("bob-omb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+
+}
+
+.cheep-cheeps {
+    background-color: blue;
+    grid-area: c;
+    background-image: url("cheep.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+
+}
+
+.total {
+    border-radius: 10px;
+    grid-area: t;
+    background-color: yellow;
+    font-size: medium;
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.goombaInput {
+    grid-area: x;
+    background-color: aqua;
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: medium;
+    display: flex;
+
+
+}
+
+.bobInput {
+    grid-area: y;
+    background-color: green;
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: medium;
+    display: flex;
+
+}
+
+.cheapInput {
+    grid-area: z;
+    background-color: blue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+}
+
+footer {
+    background-color: dimgrey;
+    grid-area: f;
+    display: flex;
+    border-radius: 10px;
+    /* background-image: url("map.png");
+    background-repeat: no-repeat;
+    background-size: contain; */
+
+} 
+button{
+    font-size: 16px;
+
+}

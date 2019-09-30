@@ -1,0 +1,87 @@
+let greeting = `This is a fun statement welcoming you to the game.
+What is your name?`
+newRand = function (num) {
+    return (Math.floor(Math.random() * num))
+}
+let i = 0
+let isAlive = true
+let choice = '1'
+let fight = true
+let person = {
+    name: "player 1",
+    weapon: "stick",
+    status: "alive",
+    health: 100
+};
+let monster = {
+    name: "Proud Boy",
+    weapon: "bat",
+    status: "alive",
+    health: 100
+};
+// functions ////////////
+let walking = function () {
+    console.log(`walking`)
+    if (fight == newRand(4)) {
+        console.log(`*************An enemy has appeared***********`)
+        return true
+    } else {
+        console.log("noooooooo enemy............, returning false for enemy")
+        return false
+    }
+}
+let runAway = function () {
+    //random chanc of death 50%
+    if (isAlive = newRand(2)) {
+        console.log("you got away")
+        console.log(`status of isAlive, expecting '1'${isAlive}`)
+        return isAlive
+    } else console.log("you ded"),
+        console.log(` ******
+    runaway2 test expecting , dead:${isAlive}
+    **********`)
+    return isAlive;
+}
+let attack = function () {
+    // roll dice
+    if (!isAlive == newRand(4)) {
+        console.log(`you win the fight  ${isAlive}`)
+        return isAlive
+    } else console.log("you lose"), console.log(` &&&&&&&& attck test${isAlive} &&&&&&
+    &&&&&`)
+    return isAlive
+}
+console.log(greeting);
+///// main ///////////
+while (isAlive) {
+    console.log(person.name);
+    console.log(`
+    What would you like to do?
+    1. Walk
+    2. Check Inventory`)
+    if (choice == '1') {
+        fight = walking()
+    } else if (choice == '2') {
+        console.log(`checking inventory`)
+        // update weapon/gear. readline menu for which to wear
+    }
+    if (fight == true) {
+        console.log(`fight or flight, choose:`)
+        if (choice == '1') {
+            console.log("you are fighting")
+            isAlive = attack()
+            console.log(`isAlive is: ${isAlive}`)
+        } else if (choice == '2') {
+            console.log("you are running")
+            // roll dice. 50% chance of death
+            isAlive = runAway()
+            console.log(`isAlive is: ${isAlive}`)
+        }
+    }
+    //break;
+    if (i === 100) {
+        return 0
+    }
+    i = i + 1
+    console.log(i)
+}

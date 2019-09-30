@@ -1,0 +1,81 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas:
+        "h"
+        "m"
+        "f"
+}
+
+html,
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif box-sizing: border-box;
+    background-color: #ffeead;
+    /* margin: 10px; */
+    background-image: url("mike-kenneally-TD4DBagg2wE-unsplash.jpg")
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #ffeead;
+
+}
+
+/*  */
+
+header>ul {
+    background-color: rgba(245, 27, 11, .8);
+    display: flex;
+    justify-content: space-between;
+    grid-area: h;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+main {
+    background-color: rgba(255, 255, 255, .8);
+    grid-area: m;
+    border-radius: 10px;
+
+}
+
+
+footer {
+    background-color: rgba(8, 38, 185, .8);
+    grid-area: f;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+p {
+    margin: 20px;
+    padding: 10px;
+}
+
+#company {
+    color: white;
+}
+
+#email {
+    color: red;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    /* padding: 23px; */
+}

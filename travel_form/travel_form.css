@@ -1,0 +1,17 @@
+input{
+    font-size: large;
+    background-color: bisque;
+    
+}
+body{
+    background-color: chocolate;}
+
+label{
+    font-size: large;
+}
+#container {
+    display: grid;
+    grid-template-columns: 2fr;
+
+    grid-auto-columns: max-content;
+}

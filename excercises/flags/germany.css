@@ -1,0 +1,16 @@
+.stripe{
+    width: 900px;
+    height: 200px;
+    margin:0;
+    
+
+}
+#black{
+    background-color: black;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}

@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  border: black solid 1px;
+
+  background-color: floralwhite;
+
+}
+
+p {
+  
+  /* width: 260px; */
+  /* justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: cener;
+  align-items: center;
+  color: brown;
+  font-size: calc(10px + 2vmin); */
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: lightblue;
+  margin: 0;
+}
+.nav-links {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: brown;
+  margin: 0;
+}

@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+#white{
+    background-color: white;
+    width: 280px;
+    height: 600px;
+    margin:0;
+    float: left;
+}
+#red{
+    background-color: red;width: 
+    900px;
+    height: 300px;
+    margin:0;
+}
+#green{
+    background-color: green;
+    width: 900px;
+    height: 300px;
+    margin:0;
+}

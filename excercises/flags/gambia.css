@@ -1,0 +1,17 @@
+.stripe{
+    width: 900px;
+    height: 150px;
+    /* margin:1px; */
+    
+
+}
+#red{
+    background-color: #CE1026;
+}
+#blue{
+    background-color: #0C1C8C;
+    height: 100px;
+}
+#green{
+    background-color: #3B7728;
+}

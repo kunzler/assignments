@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+
+#white{
+    background-color: white;
+    width: 130px;
+    height: 400px;
+    margin:0;
+    right: 520px;
+    position: fixed;
+    bottom: 223px;
+}
+
+#alsoWhite{
+    background-color: white;
+    width: 400px;
+    height: 130px;
+    margin:0;
+    position: fixed;
+    bottom: 360px;
+    right: 382px;
+}
+#red{
+    background-color: red;
+    width: 900px;
+    height: 600px;
+    margin:0;
+}

@@ -1,0 +1,9 @@
+#todo-list > div {
+    border: solid 1px black;
+}
+.completed{
+    text-decoration: line-through;
+}
+.picStyle{
+    width: 200px;
+}

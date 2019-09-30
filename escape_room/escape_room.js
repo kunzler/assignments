@@ -1,0 +1,67 @@
+const readline = require("readline-sync");
+const name = readline.question("What is your name? ");
+// const quest = readline.question("What is your quest?")
+// const favoriteColor = readline.question("What is your favorite color?");
+var choice ="fool"
+var key = false
+
+console.log(` Hello ${name}. My name is Fugodd. You will surely die for your tresspass,
+unless, you can prove yourself more clever than myriad others before you.
+Three choices before you.
+
+Use your wits-- live to tresspass another day
+` )
+
+while(choice === "fool"){
+    console.log(
+`Choose your fate!
+
+1) Put hand in hole
+2) Look for a key, or
+3) Open the door`)
+
+choice = readline.question()
+
+switch(choice) {
+    case "1":     
+    console.log(`you put your hand in a hole with no thought to what awaits
+    in the dark. Your foolishness has cost your life`)  
+    break;
+
+    case "2":
+    console.log(` You have found the Key! So there is one mortal with some skill. 
+    You aren't safe yet!
+    `)     
+    key = true
+    choice = "fool" 
+    break;
+    
+    case "3":
+        if (key === false){console.log(`You fool, you fell victim to one of the classic blunders! Hahahahah
+        hahahahahah hahahah`)
+        choice = "fool"
+    }
+        else {
+            console.log(`Fine. You survived.
+            You lived another day but I may kill you in the morning. Away from here.
+            `
+            )
+            break;
+        }
+    default:
+    console.log("Pay attention mortal or risk the wrath of the gods!")
+    choice = "fool"
+    break; 
+}
+
+
+
+}
+
+
+
+
+
+
+
+
