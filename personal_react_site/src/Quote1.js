@@ -26,7 +26,7 @@ class Quote1 extends Component {
 
     }
     render() {
-        const text = `${this.state.gotQuote.quote}
+        const text = `"${this.state.gotQuote.quote}"
                 -- ${this.state.gotQuote.character}`;
         return (<div>{text}</div>)
     }

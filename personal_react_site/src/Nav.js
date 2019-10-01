@@ -9,7 +9,7 @@ const Nav = () => {
                 <li>Game of Thrones</li>
                 </Link>
                 <Link to="/quote2">
-                <li>button 2</li>
+                <li>Ron Swanson</li>
                 </Link>
                 <Link to="/quote3">
                 <li>button 3</li>
