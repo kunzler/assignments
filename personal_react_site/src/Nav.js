@@ -12,7 +12,7 @@ const Nav = () => {
                 <li>Ron Swanson</li>
                 </Link>
                 <Link to="/quote3">
-                <li>button 3</li>
+                <li>Star Wars</li>
                 </Link>
 
             </ul>
