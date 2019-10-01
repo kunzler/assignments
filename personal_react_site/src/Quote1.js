@@ -1,6 +1,6 @@
 import React from 'react'
 
 const Quote1 = () =>{
-return null
+return <p>quote1</p>
 }
 export default Quote1

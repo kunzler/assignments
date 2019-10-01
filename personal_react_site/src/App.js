@@ -39,15 +39,19 @@ class App extends Component {
     const text = this.state.loading ? "loading..." : `${this.state.gotQuote.quote}
                 -- ${this.state.gotQuote.character}`;
     return (
-      <div className="App">
-        <Nav />
-        <p>{text}</p>
-        <Quote1 />
-        <Quote2 />
-        <Quote3 />
-        <Foot />
-
-      </div>
+      <Router>
+        <div className="App">
+          <Nav />
+          {/* <p>{text}</p> */}
+          <Switch>
+            <Route path="/" exact component={Quote1} />
+            <Route path="/quote1" component={Quote1} />
+            <Route path="/quote2" component={Quote2} />
+            <Route path="/quote3" component={Quote3} />
+          </Switch>
+          <Foot />
+        </div>
+      </Router>
     );
   }
 }
