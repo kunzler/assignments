@@ -30,19 +30,13 @@ class App extends Component {
       })
       .catch((error) => {
         console.error(error);
-      })
-
-
-
-  }
+      })  
+    }
   render() {
-    const text = this.state.loading ? "loading..." : `${this.state.gotQuote.quote}
-                -- ${this.state.gotQuote.character}`;
     return (
       <Router>
         <div className="App">
           <Nav />
-          {/* <p>{text}</p> */}
           <Switch>
             <Route path="/" exact component={Quote1} />
             <Route path="/quote1" component={Quote1} />
