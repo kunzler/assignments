@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Foot from './Foot';
 import Nav from './Nav';
 import Quote1 from './Quote1.js'
@@ -8,30 +7,8 @@ import Quote3 from './Quote3.js'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const url = "https://got-quotes.herokuapp.com/quotes"
-
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      loading: false,
-      gotQuote: {}
-    }
-  }
-  componentDidMount() {
-    this.setState({ loading: true })
-    axios.get(url)
-      .then(response => {
-        console.log(response.data)
-        this.setState({
-          loading: false,
-          gotQuote: response.data
-        })
-      })
-      .catch((error) => {
-        console.error(error);
-      })  
-    }
+  
   render() {
     return (
       <Router>
