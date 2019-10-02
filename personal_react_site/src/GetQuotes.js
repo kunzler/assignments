@@ -20,23 +20,20 @@ class GetQuotes extends Component {
     componentDidMount() {
         axios.get(url)
             .then(response => {
-                console.log(response.data)
-                if (url == "https://got-quotes.herokuapp.com/quotes") {
-
+                //console.log(response.data)
+                if (url === "https://got-quotes.herokuapp.com/quotes") {
+                    //console.log(response.data.quote)
                     this.setState({
                         gotQuote: response.data.quote,
                         gotChar: response.data.character
-
                     })
                 }
-                if (url == "http://ron-swanson-quotes.herokuapp.com/v2/quotes") {
-
+                if (url === "http://ron-swanson-quotes.herokuapp.com/v2/quotes") {
                     this.setState({
                         gotQuote: response.data
-
                     })
                 }
-                if (url == "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
+                if (url === "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
 
                     this.setState({
                         gotQuote: response.data
@@ -50,17 +47,35 @@ class GetQuotes extends Component {
             })
 
     }
-    handleClick() {
+    handleClick()  {
         axios.get(url)
             .then(response => {
-                console.log(response.data)
-                this.setState({
-                    gotQuote: response.data
-                })
+                //console.log(response.data)
+                if (url === "https://got-quotes.herokuapp.com/quotes") {
+                    //console.log(response.data.quote)
+                    this.setState({
+                        gotQuote: response.data.quote,
+                        gotChar: response.data.character
+                    })
+                }
+                if (url === "http://ron-swanson-quotes.herokuapp.com/v2/quotes") {
+                    this.setState({
+                        gotQuote: response.data
+                    })
+                }
+                if (url === "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
+
+                    this.setState({
+                        gotQuote: response.data
+
+                    })
+                }
+
             })
             .catch((error) => {
                 console.error(error);
             })
+
     }
     render() {
         const text = `"${this.state.gotQuote} --${this.state.gotChar}"`;
