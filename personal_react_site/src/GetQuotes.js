@@ -13,17 +13,37 @@ class GetQuotes extends Component {
     constructor() {
         super()
         this.state = {
-            gotQuote: null
+            gotQuote: null,
+            gotChar: null
         }
     }
     componentDidMount() {
         axios.get(url)
             .then(response => {
                 console.log(response.data)
-                this.setState({
-                    gotQuote: response.data
+                if (url == "https://got-quotes.herokuapp.com/quotes") {
 
-                })
+                    this.setState({
+                        gotQuote: response.data.quote,
+                        gotChar: response.data.character
+
+                    })
+                }
+                if (url == "http://ron-swanson-quotes.herokuapp.com/v2/quotes") {
+
+                    this.setState({
+                        gotQuote: response.data
+
+                    })
+                }
+                if (url == "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
+
+                    this.setState({
+                        gotQuote: response.data
+
+                    })
+                }
+
             })
             .catch((error) => {
                 console.error(error);
@@ -43,8 +63,7 @@ class GetQuotes extends Component {
             })
     }
     render() {
-        const text = `"${this.state.gotQuote.quote}"
-                -- ${this.state.gotQuote.character}`;
+        const text = `"${this.state.gotQuote} --${this.state.gotChar}"`;
         return (
             <div>
                 {text}
