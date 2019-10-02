@@ -6,12 +6,14 @@ import Quote2 from './Quote2.js'
 import Quote3 from './Quote3.js'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import GetQuotes from './GetQuotes'
 
 class App extends Component {
-  
+
   render() {
     return (
       <Router>
+        <GetQuotes />
         <div className="App">
           <Nav />
           <Switch>

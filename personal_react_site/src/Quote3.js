@@ -12,22 +12,21 @@ class Quote3 extends Component {
         }
     }
     componentDidMount() {
-        this.setState({ loading: true })
         axios.get(url)
             .then(response => {
-                console.log(response.data.starWarsQuote)
+                console.log(response.data)
                 this.setState({
-                    gotQuote: response.data.starWarsQuote
+                    gotQuote: response.data
 
                 })
             })
             .catch((error) => {
                 console.error(error);
             })
-
     }
+
     render() {
-        const text = `"${this.state.gotQuote}"`;
+        const text = `${this.state.gotQuote.starWarsQuote}`;
         return (<div>{text}</div>)
     }
 }
