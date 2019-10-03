@@ -6,16 +6,10 @@
 
 }
 
-p {
-  
-  /* width: 260px; */
-  /* justify-content: center;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: cener;
-  align-items: center;
-  color: brown;
-  font-size: calc(10px + 2vmin); */
+p{
+  height: 10vh;
+  font-size: x-large;
+
 }
 
 
@@ -24,7 +18,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: lightblue;
+  background: #C0FFEE; 
   margin: 0;
 }
 .nav-links {
@@ -40,6 +34,6 @@ footer{
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: brown;
+  background: #bada55;
   margin: 0;
 }

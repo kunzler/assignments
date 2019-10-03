@@ -4,7 +4,7 @@ import axios from 'axios';
 let url;
 if (window.location.href.includes('quote1')) {
     url = "https://got-quotes.herokuapp.com/quotes"
-} else if (window.location.href.includes('quote1')) {
+} else if (window.location.href.includes('quote2')) {
     url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes"
 } else if (window.location.href.includes('quote3')) {
     url = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote"
@@ -34,13 +34,10 @@ class GetQuotes extends Component {
                     })
                 }
                 if (url === "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
-
                     this.setState({
                         gotQuote: response.data
-
                     })
                 }
-
             })
             .catch((error) => {
                 console.error(error);
@@ -81,7 +78,7 @@ class GetQuotes extends Component {
         const text = `"${this.state.gotQuote} --${this.state.gotChar}"`;
         return (
             <div>
-                {text}
+                <p>{text}</p>
                 <button onClick={() => this.handleClick()}>Next</button>
             </div>)
     }
