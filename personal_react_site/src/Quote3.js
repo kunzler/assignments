@@ -12,5 +12,4 @@ class Quote3 extends Component {
     }
 }
 
-
 export default Quote3

@@ -16,9 +16,10 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route path="/" exact component={Quote1} />
+            <Route path="/quote3" component={Quote3} />
+
             <Route path="/quote1" component={Quote1} />
             <Route path="/quote2" component={Quote2} />
-            <Route path="/quote3" component={Quote3} />
           </Switch>
           <Foot />
         </div>
