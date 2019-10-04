@@ -36,7 +36,7 @@ class GetQuotes extends Component {
                 if (url === "http://ron-swanson-quotes.herokuapp.com/v2/quotes") {
                     this.setState({
                         gotQuote: response.data,
-                        gotChar: "ron"
+                        gotChar: "Ron Swanson"
                     })
                 }
                 console.log(response.data)
@@ -93,7 +93,7 @@ class GetQuotes extends Component {
         return (
             <div>
                 <p>{text}</p>
-                <button onClick={() => this.handleClick()}>Next</button>
+                <button onClick={() => this.handleClick()}onClick={() => window.location.reload(false)}>Next</button>
             </div>)
     }
 }

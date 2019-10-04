@@ -8,7 +8,7 @@ const Nav = () => {
       
     return (
         <nav>
-            <ul className="nav-links">
+            <ul className="nav-links" onClick={() => window.location.reload(false)}>
                 <Link to="/quote1">
                 <li>Game of Thrones</li>
                 </Link>
