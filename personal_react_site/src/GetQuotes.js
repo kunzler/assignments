@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// let url;
-// if (window.location.href.includes('quote1')) {
-//     url = "https://got-quotes.herokuapp.com/quotes"
-// } else if (window.location.href.includes('quote2')) {
-//     url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes"
-// } else if (window.location.href.includes('quote3')) {
-//     url = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote"
-// }
+let url;
+if (window.location.href.includes('quote1')) {
+    url = "https://got-quotes.herokuapp.com/quotes"
+} else if (window.location.href.includes('quote2')) {
+    url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes"
+} else if (window.location.href.includes('quote3')) {
+    url = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote"
+}
 //let url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
 //let url = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
- let url = "https://got-quotes.herokuapp.com/quotes"
+// let url = "https://got-quotes.herokuapp.com/quotes"
 
 class GetQuotes extends Component {
     constructor() {
