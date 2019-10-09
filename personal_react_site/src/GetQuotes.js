@@ -24,7 +24,7 @@ class GetQuotes extends Component {
         }
     }
     componentDidMount() {
-        this.setState({loading: true})
+        this.setState({ loading: true })
         axios.get(url)
             .then(response => {
                 //console.log(response.data)
@@ -63,7 +63,7 @@ class GetQuotes extends Component {
             })
 
     }
-    handleClick()  {
+    handleClick() {
         axios.get(url)
             .then(response => {
                 //console.log(response.data)
@@ -83,12 +83,12 @@ class GetQuotes extends Component {
                         loading: false,
 
                         gotQuote: response.data
-                        
+
                     })
                 }
                 if (url === "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote") {
-                    
-                // console.log(response.data)
+
+                    // console.log(response.data)
                     this.setState({
                         loading: false,
 
@@ -105,11 +105,11 @@ class GetQuotes extends Component {
 
     }
     render() {
-        const text = this.state.loading ? "loading ...": `${this.state.gotQuote} —${this.state.gotChar}`;
+        const text = this.state.loading ? "loading ..." : `${this.state.gotQuote} —${this.state.gotChar}`;
         return (
             <div>
                 <p>{text}</p>
-                <button onClick={() => this.handleClick()}onClick={
+                <button onClick={() => this.handleClick()} onClick={
                     () => window.location.reload(false)}>Next</button>
             </div>)
     }

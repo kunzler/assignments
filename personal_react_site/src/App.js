@@ -15,7 +15,7 @@ class App extends Component {
         <div className="App">
           <Nav />
           <Switch>
-            <Route path="/" exact component={Quote1} />
+            <Route path="/" component={Quote1} />
             <Route path="/quote3" component={Quote3} />
 
             <Route path="/quote1" component={Quote1} />
