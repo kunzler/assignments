@@ -24,7 +24,6 @@ const todos = [
     
 ];
 
-// server route to handle a get requet to a specific endpoint
 app.get("/todos",(req, res)=>{
     console.log(todos);
     res.send(todos);
@@ -37,7 +36,6 @@ app.get("/todos/:_id", (req, res) => {
     res.send(foundTodos);
 })
 
-
 app.post("/todos", (req, res) => {
     const newTodo = req.body;
     newTodo._id = uuid();
@@ -48,36 +46,11 @@ app.post("/todos", (req, res) => {
 })
 
 
-
-
 app.delete("/todos/:_id", (req, res) => {
     const todoIndexToDelete = todos.find(todo => todo._id === req.params._id);
     todos.splice(todoIndexToDelete, 1);
     res.send(`you deleted successfully`);
 })
-
-
-
-// // PUT - updates
-// app.put("/movies/:_id", (req, res) => {
-//     // We recieve the movie id through the request parameters
-//     const movieId = req.params._id 
-
-//     // find the object to update
-//     const movieToUpdate = movies.find(movie => movie._id === movieId)
-
-//     // find the outdated movie object's index number
-//     const movieIndexToUpdate = movies.findIndex(movie => movie._id === movieId)
-
-//     // create the updated version
-//     const updatedMovie = Object.assign(movieToUpdate, req.body)
-
-//     // update the database with updated object
-//     movies.splice(movieIndexToUpdate, 1, updatedMovie)
-
-//     // send back the updated object
-//     res.send(updatedMovie)
-// })
 
 app.put("/todos/:_id", (req, res) => {
     const todoId = req.params._id;
@@ -86,8 +59,6 @@ app.put("/todos/:_id", (req, res) => {
     const updatedTodo = Object.assign(todoToUpdate, req.body);
     todos.splice(indexToUpdate, 1, updatedTodo);
     res.send(updatedTodo);
-
-    
 })
 
 app.listen(7000, () => {
