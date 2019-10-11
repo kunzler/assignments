@@ -31,8 +31,6 @@ app.get("/todos",(req, res)=>{
 
 app.get("/todos/:_id", (req, res) => {
     const foundTodos = todos.find(todo => todo._id === req.params._id);
-    console.log(foundTodos);
-
     res.send(foundTodos);
 })
 
